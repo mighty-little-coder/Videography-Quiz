@@ -81,7 +81,7 @@
       </div>
 
       <div class="numAnswered">
-        You answered "" out of 20 correct!
+        You answered <span id="correctNum"></span> out of 15 correct!
       </div>
 
       <div class="timeRemain">
@@ -101,6 +101,13 @@
     <section class="scoreBoard">
 
       <h1>Highscore</h1>
+
+      <h2>Enter Your User Name:</h2>
+      <form>
+          <label for="username">User Name:</label>
+          <input type="text" id="username" name="username" required>
+          <button type="submit">Submit</button>
+      </form>
 
       <div class="highscore">
         <h2>NAME:</h2>

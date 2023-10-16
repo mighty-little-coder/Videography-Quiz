@@ -1,12 +1,15 @@
 /* Multipage styling */
-#loadingPage {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  font-family: sans-serif;
+html {
   background-image: url(./images/chris-murray-SQL6cO9D9lU-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+#loadingPage {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
 }
 
 #quizPages {
@@ -14,10 +17,6 @@
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   font-family: sans-serif;
-  background-image: url(./images/billy-freeman-DequZoeAtug-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: white;
 }
 
@@ -26,10 +25,6 @@
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   font-family: sans-serif;
-  background-image: url(./images/yunfan-xu-YpTXAjxKMvg-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 /* Loading page styling */
