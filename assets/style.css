@@ -1,0 +1,452 @@
+/* Multipage styling */
+#loadingPage {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  background-image: url(./images/chris-murray-SQL6cO9D9lU-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#quizPages {
+  display: none;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  background-image: url(./images/billy-freeman-DequZoeAtug-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+#scoresPage {
+  display: none;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  background-image: url(./images/yunfan-xu-YpTXAjxKMvg-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Loading page styling */
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 40px 40px;
+  font-size: 7.5em;
+  font-weight: 600;
+  color: white;
+  text-shadow: 3px 3px 9px black;
+}
+
+.sub {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  color: white;
+  text-shadow: 3px 3px 9px black;
+}
+
+.nav {
+  display: flex;
+  font-size: 2em;
+  border-radius: 25px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  max-width: 300px;
+  padding: 20px;
+  margin: 100px auto 45px auto;
+  box-shadow: 3px 3px 9px black;
+}
+
+.rulesList {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  width: 75%;
+  max-width: 1000px;
+  box-shadow: 3px 3px 9px black;
+}
+
+.rulesList ol {
+  padding-left: 100px;
+}
+
+.rulesList ol li {
+  padding: 2% 5%;
+}
+
+.goButton {
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-width: 1px;
+  border-radius: 25px;
+  max-width: 400px;
+  padding: 20px;
+  margin: 100px auto 45px auto;
+  box-shadow: 3px 3px 9px black;
+}
+
+.goButton:hover {
+  background-color: lemonchiffon;
+  cursor: pointer;
+  /* font-weight: bold; */
+  transition: all 0.2s;
+}
+
+/* Quiz pages styling */
+.startButton {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 250, 205, 0.65);
+  width: 35%;
+  height: 40px;
+  margin: 30px auto 0px auto;
+  padding: 11px;
+  color: black;
+  font-size: 2em;
+  font-weight: 750;
+  box-shadow: 3px 3px 9px black;
+  transition: all 0.2s;
+}
+
+.startButton:hover {
+  background-color: lemonchiffon;
+  cursor: pointer;
+}
+
+.quizTimer {
+  display: flex;
+  display: none;
+  justify-content: center;
+  background-color: rgba(255, 250, 205, 0.65);
+  width: 35%;
+  height: 40px;
+  margin: 30px auto 0px auto;
+  padding: 11px;
+  color: black;
+  font-size: 2em;
+  font-weight: 750;
+  box-shadow: 3px 3px 9px black;
+}
+
+.questionBox {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 85%;
+  max-width: 1000px;
+  margin: 75px auto 35px auto;
+  height: 200px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 9px black;
+}
+
+.questionCount span {
+  align-self: flex-start;
+  justify-self: flex-start;
+  /* position: absolute; */
+  color: black;
+  /* margin: 10px 0px 0px 10px; */
+}
+
+.questionCount span p {
+  align-self: flex-start;
+  justify-self: flex-start;
+  /* position: absolute; */
+  color: black;
+  /* margin: 10px 0px 0px 10px; */
+}
+
+#question {
+  margin: auto;
+  justify-self: center;
+  align-self: center;
+  padding: 45px;
+  color: black;
+  font-size: 2.5em;
+}
+
+.answersArea {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#answerTabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 900px;
+}
+
+.answerBtn {
+  color: black;
+  font-size: 1.25em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+  height: 150px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 9px black;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.answerBtn:hover {
+  background-color: lemonchiffon;
+  font-weight: 600;
+}
+
+.quizEndScore {
+  display: none;
+  justify-content: center;
+  background-color: rgba(255, 250, 205, 0.65);
+  width: 20%;
+  height: 40;
+  margin: 30px auto 0px auto;
+  padding: 11px;
+  color: black;
+  font-size: 2em;
+  font-weight: 750;
+  box-shadow: 3px 3px 9px black;
+  transition: all 0.2s;
+}
+
+.quizEndScore:hover {
+  background-color: lemonchiffon;
+}
+
+
+.nextBtn {
+  display: none;
+  justify-content: center;
+  background-color: rgba(255, 250, 205, 0.65);
+  width: 20%;
+  height: 40;
+  margin: 30px auto 0px auto;
+  padding: 11px;
+  color: black;
+  font-size: 2em;
+  font-weight: 750;
+  box-shadow: 3px 3px 9px black;
+  transition: all 0.2s;
+}
+
+.nextBtn:hover {
+  background-color: lemonchiffon;
+}
+
+/* Scoreboard pages styling */
+.finalCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  margin: 75px auto 0px auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  width: 75%;
+  max-width: 1000px;
+  box-shadow: 3px 3px 9px black;
+}
+
+.finalCard h1 {
+  font-size: 6em;
+  margin: 50px 0px 0px 0px;
+  text-shadow: 2px 2px 4px black;
+
+}
+
+.finalCard h2 {
+  font-size: 2em;
+  margin: 0px 0px 10px 350px;
+  opacity: 10%;
+}
+
+.finalCard div {
+  display: flex;
+}
+
+.scoreNav {
+  display: flex;
+  font-size: 1.75em;
+  border-radius: 25px;
+  justify-content: center;
+}
+
+.scoreNav ul {
+  display: flex;
+}
+
+.scoreNav ul li {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 14px;
+  border-radius: 15px;
+  margin: 10px 20px;
+  box-shadow: 3px 3px 9px black;
+}
+
+.scoreIs {
+  display: flex;
+  font-size: 3em;
+  padding: 4% 2%;
+}
+
+.numAnswered {
+  display: flex;
+  font-size: 3em;
+  padding: 4% 2%;
+}
+
+.timeRemain {
+  display: flex;
+  font-size: 3em;
+  padding: 4% 0% 8% 0%;
+}
+
+.scoreBoard {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  margin: 100px auto 45px auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  width: 75%;
+  max-width: 1000px;
+  box-shadow: 3px 3px 9px black;
+}
+
+.scoreBoard h1 {
+  font-size: 6em;
+  margin: 50px 0px 50px 0px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.highscore {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px black;
+}
+
+.scoreBoard h2 {
+  margin: 0 20%;
+  margin-bottom: 20px;
+}
+
+.identifiers {
+  display: flex;
+}
+
+.scoreBoard ul {
+  padding: 0px 0px 30px 0px;
+}
+
+.scoreBoard ul li {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  padding: 5px 130px 5px 130px;
+}
+
+.resetQuiz {
+  display: none;
+  font-size: 1.75em;
+  border-radius: 25px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 14px;
+  border-radius: 15px;
+  margin: 0 auto 100px auto;
+  box-shadow: 3px 3px 9px black;
+  width: 400px;
+}
+
+.resetQuiz:hover {
+  background-color: lemonchiffon;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.scoreLog:hover {
+  background-color: lemonchiffon;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.renderAllAnswers:hover {
+  background-color: lemonchiffon;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.doBetter:hover {
+  background-color: lemonchiffon;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.checkAnswers {
+  display: none;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 14px;
+  border-radius: 15px;
+  margin: 100px auto 60px auto;
+  box-shadow: 3px 3px 9px black;
+  max-width: fit-content;
+}
+
+.checkAnswers h1 {
+  font-size: 3.5em;
+  margin: 15px auto 50px auto;
+  text-shadow: 2px 2px 4px black;
+}
+
+.checkAnsQuestions {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.75em;
+  border-radius: 25px;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.checkAnswers ul {
+  padding: 0px 0px 50px 0px;
+  list-style-type: none;
+}
+
+.checkAnswers ul li {
+  margin: 0px 20px 10px 20px;
+}
+
+.checkAnsAns {
+  font-weight: 200;
+}
+
+#special {
+  background-color: rgba(92, 159, 92, 0.5);
+  border-radius: 5px;
+  padding: 3px 10px 3px 10px;
+  max-width: fit-content;
+}
