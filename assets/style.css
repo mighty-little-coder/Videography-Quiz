@@ -309,8 +309,9 @@ html {
   padding: 4% 2%;
 }
 
+/* Would like to add functionality for capturing and rendering how much time was remaining */
 .timeRemain {
-  display: flex;
+  display: none;
   font-size: 3em;
   padding: 4% 0% 8% 0%;
 }
@@ -345,6 +346,10 @@ html {
 .scoreBoard h2 {
   margin: 0 20%;
   margin-bottom: 20px;
+}
+
+form {
+  margin: 0px 0px 30px 0px;
 }
 
 .identifiers {

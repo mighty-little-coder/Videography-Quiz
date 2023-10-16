@@ -109,6 +109,7 @@ var startAgain = document.querySelector(".doBetter")
 var improveBtn = document.querySelector(".resetQuiz")
 var scoreSheet = document.querySelector(".scoreBoard")
 var numCorrectAns = document.querySelector("#correctNum")
+var spareTimer = document.querySelector("#leftOverTime")
 var renderAnswersEl = document.querySelector(".renderAllAnswers")
 var renderCheckAns = document.querySelector(".checkAnswers")
 
@@ -160,7 +161,7 @@ function generateQuestion() {
 }
 
 function setTime() {
-  var timeLeft = 15;
+  var timeLeft = 45;
   var timerInterval = setInterval(() => {
     timeLeft--;
     timerEl.textContent = ("Time Remaining: " + timeLeft);
@@ -206,6 +207,23 @@ console.log(questionIndex)
 console.log(questions)
 
 // function saveScore() {
+//   localStorage.setItem("userScore", JSON.stringify(userScore));
+// }
+
+// userScoreForm.addEventListener("submit", function(event) {
+//   event.preventDefault();
+//   var userScoreText = user
+// })
+
+function renderLastRegistered() {
+  var userName = localStorage.getItem("userName");
+  if (!userName) {
+    return;
+  }
+}
+
+
+// function saveScore() {
 //   highScores.push ({
 //     name: document.getElementById("userName").value,
 //     userHighScore: parseInt(userScore)
@@ -234,7 +252,11 @@ console.log(questions)
 function goToScores() {
   quizPages.style.display = "none";
   scoresPage.style.display = "block";
-  numCorrectAns.textContent = " " + userScore + " ";
+  numCorrectAns.textContent = "" + userScore + "";
+  // Would like to add functionality for capturing and rendering how much time was remaining
+  // spareTimer.textContent = timeLeft
+
+
 }
 
 function goToStart() {
