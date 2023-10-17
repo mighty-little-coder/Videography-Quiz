@@ -22,7 +22,7 @@ var questions = [
   {
     questionTitle: "What is \"depth of field\"?",
     answersArray: ["The distance between the closest and farthest objects in frame", "How far a quarterback can successfully complete a pass", "How long a lens is", "How far a lens can zoom"],
-    correctAnswer: "Four"
+    correctAnswer: "The distance between the closest and farthest objects in frame"
   },
   
   {

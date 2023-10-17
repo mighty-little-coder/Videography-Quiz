@@ -18,9 +18,9 @@ N/A
 
 This quiz is meant to test the user's understanding opf videography basics. Navigating from the intro page to the quiz gives the users the option to answer 15 questions. They are then able to navigate to the highscores page to see their scores as well as the correct answers. They are then able to restart the quiz and try again.
 
-Follow this link to get to my repository for this quiz.
+Follow this link to get to my repository for this quiz. - https://github.com/mighty-little-coder/Videography-Quiz
 
-Follow this link to get to the functioning quiz.
+Follow this link to get to the functioning quiz. - https://mighty-little-coder.github.io/Videography-Quiz/
 
 ![Quiz Intro Page](./assets/images/Screenshot%20(23).png)
 
