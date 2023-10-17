@@ -273,9 +273,10 @@ html {
   opacity: 10%;
 }
 
-.finalCard div {
-  display: flex;
-}
+/* .finalCard div { */
+  /* Want to add later with functionality in JS */
+  /* display: none; */
+/* } */
 
 .scoreNav {
   display: flex;
@@ -298,7 +299,8 @@ html {
 }
 
 .scoreIs {
-  display: flex;
+  /* Want to add later with functionality in JS */
+  display: none;
   font-size: 3em;
   padding: 4% 2%;
 }
@@ -307,6 +309,7 @@ html {
   display: flex;
   font-size: 3em;
   padding: 4% 2%;
+  margin-bottom: 4%;  
 }
 
 /* Would like to add functionality for capturing and rendering how much time was remaining */
