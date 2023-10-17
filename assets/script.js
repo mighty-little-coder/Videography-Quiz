@@ -116,13 +116,7 @@ var renderCheckAns = document.querySelector(".checkAnswers");
 var userNameSpan = document.querySelector("userNameScore");
 var submitUserName = document.querySelector("submit");
 var timeLeft = 45;
-var percentage = (userScore / 15) * 100;
-
-// silly name here
-// let part = 35;
-// let whole = 50;
-// let percentage = (part / whole) * 100;
-// console.log(`The percentage is: ${percentage}%`); 
+var percentage = (userScore/questions.length) * 100;
 
 document.querySelector(".goButton").addEventListener("click", initiateQuiz);
 document.querySelector(".startButton").addEventListener("click", setTime);
@@ -237,7 +231,7 @@ function renderLastRegistered() {
   userScoreSpan.textContent = userScoreTally;
 }
 
-submitUserName.addEventListener("click", function (event) {
+button.addEventListener("click", function(event) {
   event.preventDefault();
 
   if (userName === "") {
@@ -281,12 +275,28 @@ function goToScores() {
   quizPages.style.display = "none";
   scoresPage.style.display = "block";
 // ENTER CODE FOR TEXTCONTENT PERCENTAGE SCORE
-answerPercentage.textContent = "You scored is: " + percentage + "%";
+// answerPercentage.textContent = "Your score is: " + percentage + "%";
   numCorrectAns.textContent = "You answered " + userScore + " out of 15 correctly!";
   // Would like to add functionality for capturing and rendering how much time was remaining
   // spareTimer.textContent = timeLeft
 }
 
+// .
+
+// function clearLabels(){
+//   initialsToStore.textContent = '';
+//   scoreToStore.textContent = '';
+// }
+
+// document.querySelector('#postScoreBtn').addEventListener('click',()=> {localStorage.setItem(initialsToStore.value, scoreToStore.value);
+//   document.getElementById('info').append("Score added🏆");  
+// })
+// setTimeout(function(){
+//   location.reload();
+// }, 10000);
+
+
+// .
 function goToStart() {
   location.reload()
 }
