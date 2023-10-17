@@ -126,6 +126,8 @@ document.querySelector(".scoreLog").addEventListener("click", goToHighscores);
 document.querySelector(".doBetter").addEventListener("click", goToStart);
 document.querySelector(".resetQuiz").addEventListener("click", goToStart);
 document.querySelector(".renderAllAnswers").addEventListener("click", renderAnswers);
+document.querySelector("submit").addEventListener("submit", function(event) {
+  event.preventDefault()});
 
 function initiateQuiz() {
   loadingPage.style.display = "none"
@@ -178,15 +180,6 @@ function setTime() {
       answerEl.style.display = "none";
       scoreNav.style.display = "flex";
     }
-
-    // if (questionIndex.length[15]) {
-    //   clearTimeout(timerInterval)
-    //   timerEl.textContent = "TIME IS UP!"
-    //   questionEl.style.display = "none";
-    //   answerEl.style.display = "none";
-    //   scoreNav.style.display = "flex";
-    // }
-
   }, 1000);
 }
 
@@ -245,32 +238,6 @@ button.addEventListener("click", function(event) {
   }
 });
 
-// function saveScore() {
-//   highScores.push ({
-//     name: document.getElementById("userName").value,
-//     userHighScore: parseInt(userScore)
-//   })
-
-//   highScores.sort((a,b) => b.score - a.score);
-//   localStorage.setItem('highScores', JSON.stringify(highScore))
-//   renderHighScores();
-// }
-
-// function getScore() {
-//   var storedHighScore = JSON.parse(localStorage.getItem("highScores"));
-//   if (storedHighScore!== null) {
-//     userHighScore = storedHighScore
-//   }
-//   renderHighScores();
-// }
-// renderHighScores() {
-// highScores = JSON.parse(localStorage.getItem(highScores))
-
-// highScores.forEach((entry, index) => {
-//   const listItem = document.createElement
-// })
-// }
-
 function goToScores() {
   quizPages.style.display = "none";
   scoresPage.style.display = "block";
@@ -281,22 +248,6 @@ function goToScores() {
   // spareTimer.textContent = timeLeft
 }
 
-// .
-
-// function clearLabels(){
-//   initialsToStore.textContent = '';
-//   scoreToStore.textContent = '';
-// }
-
-// document.querySelector('#postScoreBtn').addEventListener('click',()=> {localStorage.setItem(initialsToStore.value, scoreToStore.value);
-//   document.getElementById('info').append("Score added🏆");  
-// })
-// setTimeout(function(){
-//   location.reload();
-// }, 10000);
-
-
-// .
 function goToStart() {
   location.reload()
 }
