@@ -118,6 +118,7 @@ var submitUserName = document.querySelector("submit");
 var timeLeft = 45;
 var percentage = (userScore / 15) * 100;
 
+// silly name here
 // let part = 35;
 // let whole = 50;
 // let percentage = (part / whole) * 100;
