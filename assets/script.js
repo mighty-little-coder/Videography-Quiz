@@ -129,25 +129,18 @@ document.querySelector(".scoreLog").addEventListener("click", goToHighscores);
 document.querySelector(".doBetter").addEventListener("click", goToStart);
 document.querySelector(".resetQuiz").addEventListener("click", goToStart);
 document.querySelector(".renderAllAnswers").addEventListener("click", renderAnswers);
-document.querySelector("#username").addEventListener("submit", function (event) {
-  debugger;
-  event.preventDefault()
-  var userName = localStorage.getItem("userName");
-  
-  if (!userName) {
-    return;
-  };
+// document.querySelector("#username").addEventListener("submit", function (event) {
+//   event.preventDefault()
+//   var userName = localStorage.getItem("userName");
+// });
 
-  
-  // userNameSpan.textContent = userNameScore;
-  // userScoreSpan.textContent = userScoreTally;
-});
-
+// Loads quiz page
 function initiateQuiz() {
   loadingPage.style.display = "none"
   quizPages.style.display = "block"
 }
 
+// Effects behavior of quiz
 function quizStart() {
   startBtn.style.display = "none";
   timerEl.style.display = "flex";
@@ -181,6 +174,7 @@ function generateQuestion() {
   }
 }
 
+//Sets timer and keeps track of it
 function setTime() {
   timeLeft = 45
   var timerInterval = setInterval(() => {
@@ -197,51 +191,44 @@ function setTime() {
   }, 1000);
 }
 
+// Checks the selected answer against the known correct answer
 function checkAnswer() {
   var correctAnswer = questions[questionIndex].correctAnswer;
   var selectedAnswer = this.value
   if (questionIndex < questions.length) {
     if (selectedAnswer == correctAnswer) {
       userScore += 1;
-      console.log("Correct Answer!")
-      console.log("Total Questions Answered Correctly: " + userScore)
+      function saveScore() {
+        localStorage.setItem("userScore", JSON.stringify(userScore));
+      }
     } else {
       timeLeft -= 3;
       console.log("Wrong Answer");
     }
+
     questionIndex++;
     generateQuestion()
-    console.log(userScore)
   } else {
     quizOver()
   }
 }
 
-console.log(questions)
-
-// function saveScore() {
-//   localStorage.setItem("userScore", JSON.stringify(userScore));
-// }
-
-// userScoreForm.addEventListener("submit", function(event) {
-//   event.preventDefault();
-//   var userScoreText = user
-// })
-
+// Code written for "submit scores" in highscore area
 function renderLastRegistered() {
   var userName = localStorage.getItem("userName");
   if (!userName) {
     return;
   }
 
-  userNameSpan.textContent = userNameSpan;
-  userScoreSpan.textContent = userScoreSpan;
+  // STILL WORKING ON THIS CODE TO ENTER USERNAME
+  userNameSpan.textContent = userName;
+  userScoreSpan.textContent = userScore;
 }
 
 button.addEventListener("click", function (event) {
   event.preventDefault();
 
-  if (username === "") {
+  if (userName === "") {
     window.alert("Error\n\nUsername field cannot be blank");
   } else {
     window.alert("Success!\n\nYour name has been added to list of the best videography quiz takers ever!");
@@ -255,6 +242,7 @@ button.addEventListener("click", function (event) {
   }
 });
 
+// Goes to scores page
 function goToScores() {
   quizPages.style.display = "none";
   scoresPage.style.display = "block";
@@ -265,16 +253,19 @@ function goToScores() {
   // spareTimer.textContent = timeLeft
 }
 
+// Reloads webpage and goes back to start of test
 function goToStart() {
   location.reload()
 }
 
+// Renders highscores Page
 function goToHighscores() {
   scoreSheet.style.display = "flex";
   improveBtn.style.display = "flex";
   renderCheckAns.style.display = "none";
 }
 
+// Renders Answers page
 function renderAnswers() {
   scoreSheet.style.display = "none";
   if (renderCheckAns.style.display = "none") {
