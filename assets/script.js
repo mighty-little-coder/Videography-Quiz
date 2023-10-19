@@ -233,8 +233,8 @@ button.addEventListener("click", function (event) {
   } else {
     window.alert("Success!\n\nYour name has been added to list of the best videography quiz takers ever!");
 
-    localStorage.setItem("userName", userName);
-    localStorage.setItem("userScore", userScore);
+    localStorage.setItem("userName", JSON.stringify(userName));
+    localStorage.setItem("userScore", JSON.stringify(userScore));
     renderLastRegistered();
 
     console.log(userName)
