@@ -228,16 +228,18 @@ function renderLastRegistered() {
 button.addEventListener("click", function (event) {
   event.preventDefault();
 
-  if (userName === "") {
+  var text = username.value;
+
+  if (text === "") {
     window.alert("Error\n\nUsername field cannot be blank");
   } else {
     window.alert("Success!\n\nYour name has been added to list of the best videography quiz takers ever!");
 
-    localStorage.setItem("userName", JSON.stringify(userName));
+    localStorage.setItem("userName", JSON.stringify(text));
     localStorage.setItem("userScore", JSON.stringify(userScore));
     renderLastRegistered();
 
-    console.log(userName)
+    console.log(text)
     console.log(userScore)
   }
 });
