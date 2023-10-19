@@ -215,7 +215,7 @@ function checkAnswer() {
 
 // Code written for "submit scores" in highscore area
 function renderLastRegistered() {
-  var userName = localStorage.getItem("userName");
+  var userName = JSON.parse(localStorage.getItem("userName"));
   if (!userName) {
     return;
   }
