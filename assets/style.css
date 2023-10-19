@@ -367,7 +367,7 @@ form {
   display: flex;
   justify-content: center;
   font-size: 1.5em;
-  padding: 5px 130px 5px 130px;
+  padding: 5px 130px 5px 90px;
 }
 
 .resetQuiz {

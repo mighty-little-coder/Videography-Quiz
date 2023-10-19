@@ -57,7 +57,7 @@ var questions = [
 
   {
     questionTitle: "Which lens would show the shallowest depth of field at the same focal length?",
-    answersArray: ["8.0", "5.6", "2.0", "1.4"],
+    answersArray: ["1.4", "2.0", "5.6", "8.0"],
     correctAnswer: "1.4"
   },
 
@@ -68,7 +68,7 @@ var questions = [
   },
 
   {
-    questionTitle: "What is directly effected by the \"F-stop\" of a lens",
+    questionTitle: "What does the \"F-stop\" of a lens refer to?",
     answersArray: ["shutter speed", "ISO", "frames per second", "aperture size"],
     correctAnswer: "aperture size"
   },
@@ -225,6 +225,7 @@ function renderLastRegistered() {
   userScoreSpan.textContent = userScore;
 }
 
+// Adds functionality to submit button
 button.addEventListener("click", function (event) {
   event.preventDefault();
 
